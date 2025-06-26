@@ -61,6 +61,10 @@ This will produce a `diff.tex` file where:
 * **Added text** is highlighted in **blue**
 * **Removed text** is highlighted in **red**
 
+<p align="center">
+    <img src="samplediffpdf.png" width=70%/>
+</p>
+
 ---
 
 ## ✅ Notes
