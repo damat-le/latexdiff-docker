@@ -2,6 +2,10 @@
 
 This guide describes how to use `latexdiff` inside the [`miktex/miktex`](https://hub.docker.com/r/miktex/miktex) Docker image to compare two LaTeX files. It addresses the issue of missing dependencies in the default MikTeX container, which runs with restricted privileges and does not allow installing Perl modules necessary for `latexdiff`.
 
+<p align="center">
+    <img src="samplediffpdf.png" width=70%/>
+</p>
+
 To overcome this, we run the container as `root` by overriding its entrypoint.
 
 ---
@@ -60,10 +64,6 @@ This will produce a `diff.tex` file where:
 
 * **Added text** is highlighted in **blue**
 * **Removed text** is highlighted in **red**
-
-<p align="center">
-    <img src="samplediffpdf.png" width=70%/>
-</p>
 
 ---
 
