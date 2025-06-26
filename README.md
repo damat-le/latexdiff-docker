@@ -3,7 +3,7 @@
 This guide describes how to use `latexdiff` inside the [`miktex/miktex`](https://hub.docker.com/r/miktex/miktex) Docker image to compare two LaTeX files. It addresses the issue of missing dependencies in the default MikTeX container, which runs with restricted privileges and does not allow installing Perl modules necessary for `latexdiff`.
 
 <p align="center">
-    <img src="samplediffpdf.png" width=70%/>
+    <img src="samplediffpdf.png" width=80%/>
 </p>
 
 To overcome this, we run the container as `root` by overriding its entrypoint.
@@ -30,7 +30,7 @@ cd /path/to/your/tex/files
 By default, MikTeX runs as a low-privilege user. To install required dependencies for `latexdiff`, launch the container with elevated privileges:
 
 ```bash
-sudo docker run -ti \
+docker run -ti \
   -v miktex:/var/lib/miktex \
   -v "$(pwd)":/miktex/work \
   --user root \
